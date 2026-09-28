@@ -94,7 +94,7 @@
         /* === HERO SECTION === */
         .hero {
             height: 90vh;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=1920&auto=format&fit=crop') center/cover;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/1829980/pexels-photo-1829980.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -127,7 +127,7 @@
 
         /* === INCLUSIONES === */
         .inclusions {
-            padding: 80px 5%;
+            padding: 80px 5% 30px; /* Reducido el padding inferior para eliminar el gran espacio en blanco */
             background: var(--white);
             text-align: center;
         }
@@ -148,7 +148,7 @@
         }
         .grid-inclusions {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Ajustado para que 4 elementos se vean perfectamente centrados y estéticos */
             gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
@@ -169,11 +169,15 @@
         .inc-card p { font-size: 0.95rem; color: var(--text-gray); }
 
         /* === TOURS SECTION === */
-        .tours-section { padding: 80px 5%; max-width: 1300px; margin: 0 auto; }
+        .tours-section { 
+            padding: 20px 5% 80px; /* Reducido el padding superior para conectar suavemente con las inclusiones */
+            max-width: 1300px; 
+            margin: 0 auto; 
+        }
         .city-title {
             font-size: 2rem;
             color: var(--primary);
-            margin: 60px 0 30px;
+            margin: 30px 0 30px; /* Margen superior ajustado */
             border-left: 5px solid var(--accent);
             padding-left: 15px;
         }
@@ -403,7 +407,7 @@
             
             <!-- Tour 1 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?q=80&w=800&auto=format&fit=crop" alt="Calles tradicionales de Kyoto" class="tour-img">
+                <img src="https://images.pexels.com/photos/1831823/pexels-photo-1831823.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Calles tradicionales de Kyoto" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto</span></div>
                     <h3 class="tour-title">1. A Explorar Kyoto: Ruta Higashiyama</h3>
@@ -421,7 +425,7 @@
 
             <!-- Tour 2 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1598306441617-10901e8a8342?q=80&w=800&auto=format&fit=crop" alt="Ciervos sagrados en Nara" class="tour-img">
+                <img src="https://images.pexels.com/photos/3275005/pexels-photo-3275005.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ciervos sagrados en Nara" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto / Nara</span></div>
                     <h3 class="tour-title">2. A Explorar Kyoto y Nara</h3>
@@ -439,7 +443,7 @@
 
             <!-- Tour 3 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1578469645762-c8005315886b?q=80&w=800&auto=format&fit=crop" alt="Pabellón Dorado de Kioto" class="tour-img">
+                <img src="https://images.pexels.com/photos/3361480/pexels-photo-3361480.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pabellón Dorado de Kioto" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto</span></div>
                     <h3 class="tour-title">3. Kyoto: Pabellón Dorado y Arashiyama</h3>
@@ -462,7 +466,7 @@
             
             <!-- Tour 4 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1590559899731-a382839ce598?q=80&w=800&auto=format&fit=crop" alt="Castillo de Osaka" class="tour-img">
+                <img src="https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Castillo de Osaka" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Osaka</span></div>
                     <h3 class="tour-title">4. A Explorar Osaka</h3>
@@ -480,7 +484,7 @@
 
             <!-- Tour 5 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?q=80&w=800&auto=format&fit=crop" alt="Comida callejera en Osaka" class="tour-img">
+                <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Comida callejera en Osaka" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Osaka</span></div>
                     <h3 class="tour-title">5. A Comerse Osaka (Tour Gastronómico)</h3>
@@ -496,7 +500,7 @@
 
             <!-- Tour 6 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1615865417482-eb0d50711904?q=80&w=800&auto=format&fit=crop" alt="Carne Wagyu A5 de Japón" class="tour-img">
+                <img src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Carne Wagyu A5 de Japón" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Osaka</span></div>
                     <h3 class="tour-title">6. La Ruta del Wagyu A5 (Gastronómico)</h3>
@@ -517,7 +521,7 @@
             
             <!-- Tour 7 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800&auto=format&fit=crop" alt="Torre de Tokio y ciudad" class="tour-img">
+                <img src="https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Torre de Tokio y ciudad" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">7. Tokio: Armonía del Contraste</h3>
@@ -535,7 +539,7 @@
 
             <!-- Tour 8 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1542051812871-7552ee4931d7?q=80&w=800&auto=format&fit=crop" alt="Luces de Akihabara" class="tour-img">
+                <img src="https://images.pexels.com/photos/3274624/pexels-photo-3274624.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Luces de Akihabara" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">8. Jardines Imperiales, Akihabara y Ueno</h3>
@@ -553,7 +557,7 @@
 
             <!-- Tour 9 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=800&auto=format&fit=crop" alt="Cruce de Shibuya" class="tour-img">
+                <img src="https://images.pexels.com/photos/2385210/pexels-photo-2385210.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cruce de Shibuya" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">9. Tokio: Asakusa, Odaiba y Shibuya</h3>
@@ -571,7 +575,7 @@
 
             <!-- Tour 10 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1557406981-d2cc4313f8de?q=80&w=800&auto=format&fit=crop" alt="Noche cyberpunk en Tokio" class="tour-img">
+                <img src="https://images.pexels.com/photos/3760854/pexels-photo-3760854.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Noche cyberpunk en Tokio" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 4 Horas</span> <span>Tokio Nocturno</span></div>
                     <h3 class="tour-title">10. Tokio: Noche de Neón</h3>
@@ -587,7 +591,7 @@
 
             <!-- Tour 11 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1528360354687-839420409a6d?q=80&w=800&auto=format&fit=crop" alt="Callejón tradicional en Tokio" class="tour-img">
+                <img src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Callejón tradicional en Tokio" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 4 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">11. Tokio: La Cara Antigua</h3>
@@ -603,7 +607,7 @@
 
             <!-- Tour 12 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1558231908-04fcb07f8796?q=80&w=800&auto=format&fit=crop" alt="Comida gourmet en Tokio" class="tour-img">
+                <img src="https://images.pexels.com/photos/3740236/pexels-photo-3740236.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Comida gourmet en Tokio" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Tokio Premium</span></div>
                     <h3 class="tour-title">12. A Comerse Tokio: Ruta Nakameguro</h3>
@@ -623,7 +627,7 @@
         <div class="tours-grid">
             <!-- Tour 13 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1513622470522-26c308a55ce6?q=80&w=800&auto=format&fit=crop" alt="Torii de Miyajima en Hiroshima" class="tour-img">
+                <img src="https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Torii de Miyajima en Hiroshima" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Hiroshima / Miyajima</span></div>
                     <h3 class="tour-title">13. A Explorar Hiroshima y Miyajima</h3>
