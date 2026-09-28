@@ -11,6 +11,9 @@
     <meta property="og:description" content="Descubre Japón a tu ritmo con expertos. Exclusividad, accesos y traslados desde tu hotel.">
     <meta name="robots" content="index, follow">
     
+    <!-- FAVICON DINÁMICO (Mismo Isotipo del Logo en formato SVG inyectado) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%23BA1826' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'><path d='M4 6h16M5 10h14M8 6v14M16 6v14M9 14h6'/></svg>" type="image/svg+xml">
+
     <!-- Google Fonts: Outfit (Headings) & Quicksand (Body for soft edges) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +51,7 @@
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
 
-        /* === NAVIGATION === */
+        /* === NAVIGATION & LOGO === */
         header {
             position: fixed;
             top: 0; left: 0; width: 100%;
@@ -69,7 +72,13 @@
             color: var(--primary);
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
+        }
+        .logo .isotype {
+            width: 32px;
+            height: 32px;
+            color: var(--accent);
+            margin-right: 4px;
         }
         .logo span { color: var(--accent); }
         .nav-cta {
@@ -85,7 +94,7 @@
         /* === HERO SECTION === */
         .hero {
             height: 90vh;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1920&q=80') center/cover;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=1920&auto=format&fit=crop') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -253,6 +262,7 @@
             text-align: center; padding: 40px 20px; margin-top: 80px;
         }
         footer .logo { justify-content: center; color: var(--white); margin-bottom: 20px; }
+        footer .logo .isotype { color: var(--white); }
         
         .whatsapp-float {
             position: fixed; bottom: 30px; right: 30px;
@@ -339,7 +349,12 @@
 
     <!-- HEADER -->
     <header>
-        <div class="logo">japon<span>decerca</span></div>
+        <div class="logo">
+            <svg class="isotype" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16M5 10h14M8 6v14M16 6v14M9 14h6"/>
+            </svg>
+            japon<span>decerca</span>
+        </div>
         <a href="#tours" class="nav-cta">Ver Experiencias</a>
     </header>
 
@@ -367,11 +382,6 @@
                 <p>Tours 100% privados y personalizados únicamente para tu grupo.</p>
             </div>
             <div class="inc-card">
-                <i class="fas fa-hotel"></i>
-                <h3>Logística Impecable</h3>
-                <p>Recogida cómoda a pie directamente en el lobby de tu hotel.</p>
-            </div>
-            <div class="inc-card">
                 <i class="fas fa-ticket-alt"></i>
                 <h3>Accesos Garantizados</h3>
                 <p>Todas las entradas a los lugares de interés incluidas en el itinerario.</p>
@@ -393,7 +403,7 @@
             
             <!-- Tour 1 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Calles tradicionales de Kyoto" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?q=80&w=800&auto=format&fit=crop" alt="Calles tradicionales de Kyoto" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto</span></div>
                     <h3 class="tour-title">1. A Explorar Kyoto: Ruta Higashiyama</h3>
@@ -411,7 +421,7 @@
 
             <!-- Tour 2 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1598306441617-10901e8a8342?auto=format&fit=crop&w=800&q=80" alt="Ciervos sagrados en Nara" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1598306441617-10901e8a8342?q=80&w=800&auto=format&fit=crop" alt="Ciervos sagrados en Nara" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto / Nara</span></div>
                     <h3 class="tour-title">2. A Explorar Kyoto y Nara</h3>
@@ -429,7 +439,7 @@
 
             <!-- Tour 3 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1578469645762-c8005315886b?auto=format&fit=crop&w=800&q=80" alt="Pabellón Dorado de Kioto" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1578469645762-c8005315886b?q=80&w=800&auto=format&fit=crop" alt="Pabellón Dorado de Kioto" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto</span></div>
                     <h3 class="tour-title">3. Kyoto: Pabellón Dorado y Arashiyama</h3>
@@ -452,7 +462,7 @@
             
             <!-- Tour 4 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1590559899731-a382839ce598?auto=format&fit=crop&w=800&q=80" alt="Castillo de Osaka" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1590559899731-a382839ce598?q=80&w=800&auto=format&fit=crop" alt="Castillo de Osaka" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Osaka</span></div>
                     <h3 class="tour-title">4. A Explorar Osaka</h3>
@@ -470,7 +480,7 @@
 
             <!-- Tour 5 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=80" alt="Comida callejera en Osaka" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?q=80&w=800&auto=format&fit=crop" alt="Comida callejera en Osaka" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Osaka</span></div>
                     <h3 class="tour-title">5. A Comerse Osaka (Tour Gastronómico)</h3>
@@ -486,7 +496,7 @@
 
             <!-- Tour 6 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1615865417482-eb0d50711904?auto=format&fit=crop&w=800&q=80" alt="Carne Wagyu A5 de Japón" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1615865417482-eb0d50711904?q=80&w=800&auto=format&fit=crop" alt="Carne Wagyu A5 de Japón" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Osaka</span></div>
                     <h3 class="tour-title">6. La Ruta del Wagyu A5 (Gastronómico)</h3>
@@ -507,7 +517,7 @@
             
             <!-- Tour 7 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80" alt="Torre de Tokio y ciudad" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800&auto=format&fit=crop" alt="Torre de Tokio y ciudad" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">7. Tokio: Armonía del Contraste</h3>
@@ -525,7 +535,7 @@
 
             <!-- Tour 8 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1542051812871-7552ee4931d7?auto=format&fit=crop&w=800&q=80" alt="Luces de Akihabara" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1542051812871-7552ee4931d7?q=80&w=800&auto=format&fit=crop" alt="Luces de Akihabara" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">8. Jardines Imperiales, Akihabara y Ueno</h3>
@@ -543,7 +553,7 @@
 
             <!-- Tour 9 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?auto=format&fit=crop&w=800&q=80" alt="Cruce de Shibuya" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=800&auto=format&fit=crop" alt="Cruce de Shibuya" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">9. Tokio: Asakusa, Odaiba y Shibuya</h3>
@@ -561,7 +571,7 @@
 
             <!-- Tour 10 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1557406981-d2cc4313f8de?auto=format&fit=crop&w=800&q=80" alt="Noche cyberpunk en Tokio" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1557406981-d2cc4313f8de?q=80&w=800&auto=format&fit=crop" alt="Noche cyberpunk en Tokio" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 4 Horas</span> <span>Tokio Nocturno</span></div>
                     <h3 class="tour-title">10. Tokio: Noche de Neón</h3>
@@ -577,7 +587,7 @@
 
             <!-- Tour 11 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1528360354687-839420409a6d?auto=format&fit=crop&w=800&q=80" alt="Callejón tradicional en Tokio" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1528360354687-839420409a6d?q=80&w=800&auto=format&fit=crop" alt="Callejón tradicional en Tokio" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 4 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">11. Tokio: La Cara Antigua</h3>
@@ -593,7 +603,7 @@
 
             <!-- Tour 12 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1558231908-04fcb07f8796?auto=format&fit=crop&w=800&q=80" alt="Comida gourmet en Tokio" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1558231908-04fcb07f8796?q=80&w=800&auto=format&fit=crop" alt="Comida gourmet en Tokio" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Tokio Premium</span></div>
                     <h3 class="tour-title">12. A Comerse Tokio: Ruta Nakameguro</h3>
@@ -613,7 +623,7 @@
         <div class="tours-grid">
             <!-- Tour 13 -->
             <article class="tour-card">
-                <img src="https://images.unsplash.com/photo-1513622470522-26c308a55ce6?auto=format&fit=crop&w=800&q=80" alt="Torii de Miyajima en Hiroshima" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1513622470522-26c308a55ce6?q=80&w=800&auto=format&fit=crop" alt="Torii de Miyajima en Hiroshima" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Hiroshima / Miyajima</span></div>
                     <h3 class="tour-title">13. A Explorar Hiroshima y Miyajima</h3>
@@ -639,7 +649,12 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="logo">japon<span>decerca</span></div>
+        <div class="logo">
+            <svg class="isotype" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16M5 10h14M8 6v14M16 6v14M9 14h6"/>
+            </svg>
+            japon<span>decerca</span>
+        </div>
         <p>Servicios exclusivos en destino. Japón, a tu manera.</p>
         <p style="margin-top: 20px; font-size: 0.8rem; color: rgba(255,255,255,0.5);">© 2026 JaponDeCerca. Todos los derechos reservados.</p>
     </footer>
