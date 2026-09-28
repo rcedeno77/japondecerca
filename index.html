@@ -128,7 +128,7 @@
         /* === INCLUSIONES === */
         .inclusions-wrapper {
             background: var(--white);
-            padding: 80px 5% 0; /* Quitamos el padding inferior para evitar huecos */
+            padding: 80px 5% 0;
         }
         .inclusions {
             text-align: center;
@@ -149,7 +149,6 @@
             border-radius: 5px;
         }
         
-        /* Ajuste definitivo del grid para eliminar espacios en blanco */
         .grid-inclusions {
             display: flex;
             flex-wrap: wrap;
@@ -157,12 +156,12 @@
             gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
-            padding-bottom: 60px; /* Separación con la siguiente sección */
+            padding-bottom: 60px;
         }
         
         .inc-card {
-            flex: 1 1 240px; /* Flexbox para que se adapten perfectamente */
-            max-width: 280px; /* Limite de ancho para que no se estiren demasiado */
+            flex: 1 1 240px;
+            max-width: 280px;
             padding: 30px 20px;
             border-radius: var(--radius-soft);
             background: var(--bg-light);
@@ -378,7 +377,7 @@
         </div>
     </section>
 
-    <!-- INCLUSIONES (Ajustado para no dejar espacio vacío) -->
+    <!-- INCLUSIONES -->
     <div class="inclusions-wrapper">
         <section class="inclusions">
             <h2 class="section-title">El Estándar JaponDeCerca</h2>
@@ -515,32 +514,12 @@
                 </div>
             </article>
 
-            <!-- Tour 5 (Gastronómico) -->
-            <article class="tour-card">
-                <img src="acomerseosaka.jpg" alt="Comida callejera en Osaka" class="tour-img">
-                <div class="tour-content">
-                    <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Osaka</span></div>
-                    <h3 class="tour-title">5. A Comerse Osaka (Tour Gastronómico)</h3>
-                    <p class="tour-desc">Conocida como "la cocina de Japón". Degusta los mejores platos locales en un formato dinámico de comida callejera y tabernas.</p>
-                    <div class="tour-prices">
-                        <div class="price-row">
-                            <span class="price-label">Tour a Pie <span class="price-sublabel">Precio por persona</span></span> 
-                            <span class="price-val">~$180 USD</span>
-                        </div>
-                        <div style="font-size: 0.75rem; color: var(--accent); margin-top: 5px; text-align: right;">*Tarifas especiales para grupos grandes</div>
-                    </div>
-                    <div class="btn-group">
-                        <button class="btn btn-single" onclick="openModal('5. A Comerse Osaka (Gastronómico)', 'Tour Único a Pie')">Cotizar Experiencia</button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Tour 6 -->
+            <!-- Tour 6 (Wagyu A5) -->
             <article class="tour-card">
                 <img src="wagyua5.jpg" alt="Carne Wagyu A5 de Japón" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Osaka</span></div>
-                    <h3 class="tour-title">6. La Ruta del Wagyu A5 (Gastronómico)</h3>
+                    <h3 class="tour-title">6. La Ruta del Wagyu A5</h3>
                     <p class="tour-desc">Experiencia de alta gama para paladares exigentes. Degustación del más alto grado de marmoleo (A5) combinada con exploración urbana.</p>
                     <div class="tour-prices">
                         <div class="price-row">
@@ -633,7 +612,7 @@
 
             <!-- Tour 10 -->
             <article class="tour-card">
-                <img src="shinjuku.jpg">
+                <img src="shinjuku.jpg" alt="Shinjuku de noche" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 4 Horas</span> <span>Tokio Nocturno</span></div>
                     <h3 class="tour-title">10. Tokio: Noche de Neón</h3>
@@ -668,29 +647,9 @@
                     </div>
                 </div>
             </article>
-
-            <!-- Tour 12 (Gastronómico) -->
-            <article class="tour-card">
-                <img src="nakameguro.jpg">
-                <div class="tour-content">
-                    <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Tokio Premium</span></div>
-                    <h3 class="tour-title">12. A Comerse Tokio: Ruta Nakameguro</h3>
-                    <p class="tour-desc">Travesía culinaria premium a lo largo del elegante distrito de Nakameguro. Degusta propuestas sofisticadas de la gastronomía tokiota.</p>
-                    <div class="tour-prices">
-                        <div class="price-row">
-                            <span class="price-label">Tour Culinario <span class="price-sublabel">Precio por persona</span></span> 
-                            <span class="price-val">~$227 USD</span>
-                        </div>
-                        <div style="font-size: 0.75rem; color: var(--accent); margin-top: 5px; text-align: right;">*Tarifas especiales para grupos grandes</div>
-                    </div>
-                    <div class="btn-group">
-                        <button class="btn btn-single" onclick="openModal('12. A Comerse Tokio: Ruta Nakameguro', 'Tour Único')">Cotizar Experiencia</button>
-                    </div>
-                </div>
-            </article>
         </div>
 
-        <!-- HIROSHIMA (Ahora con el mismo grid) -->
+        <!-- HIROSHIMA -->
         <h2 class="city-title">Hiroshima: Resiliencia y Paz</h2>
         <div class="tours-grid">
             <!-- Tour 13 -->
@@ -705,9 +664,58 @@
                             <span class="price-label">Transporte Público <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
                             <span class="price-val">~$376 USD</span>
                         </div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Privado <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$764 USD</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('13. A Explorar Hiroshima y Miyajima', 'Transporte Público')">Opción Pública</button>
+                        <button class="btn btn-private" onclick="openModal('13. A Explorar Hiroshima y Miyajima', 'Transporte Privado')">Opción Privada</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- RUTAS GASTRONÓMICAS -->
+        <h2 class="city-title">Experiencias Gastronómicas</h2>
+        <div class="tours-grid">
+            <!-- Tour 5 (Gastronómico Osaka) -->
+            <article class="tour-card">
+                <img src="acomerseosaka.jpg" alt="Comida callejera en Osaka" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Osaka</span></div>
+                    <h3 class="tour-title">5. A Comerse Osaka (Gastronómico)</h3>
+                    <p class="tour-desc">Conocida como "la cocina de Japón". Degusta los mejores platos locales en un formato dinámico de comida callejera y tabernas.</p>
+                    <div class="tour-prices">
+                        <div class="price-row">
+                            <span class="price-label">Tour a Pie <span class="price-sublabel">Precio por persona</span></span> 
+                            <span class="price-val">~$180 USD</span>
+                        </div>
+                        <div style="font-size: 0.75rem; color: var(--accent); margin-top: 5px; text-align: right;">*Tarifas especiales para grupos grandes</div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-single" onclick="openModal('5. A Comerse Osaka (Gastronómico)', 'Tour Único a Pie')">Cotizar Experiencia</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tour 12 (Gastronómico Tokio) -->
+            <article class="tour-card">
+                <img src="nakameguro.jpg" alt="Ruta Nakameguro" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Tokio Premium</span></div>
+                    <h3 class="tour-title">12. A Comerse Tokio: Ruta Nakameguro</h3>
+                    <p class="tour-desc">Travesía culinaria premium a lo largo del elegante distrito de Nakameguro. Degusta propuestas sofisticadas de la gastronomía tokiota.</p>
+                    <div class="tour-prices">
+                        <div class="price-row">
+                            <span class="price-label">Tour Culinario <span class="price-sublabel">Precio por persona</span></span> 
+                            <span class="price-val">~$227 USD</span>
+                        </div>
+                        <div style="font-size: 0.75rem; color: var(--accent); margin-top: 5px; text-align: right;">*Tarifas especiales para grupos grandes</div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-single" onclick="openModal('12. A Comerse Tokio: Ruta Nakameguro', 'Tour Único')">Cotizar Experiencia</button>
                     </div>
                 </div>
             </article>
