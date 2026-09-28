@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaponDeCerca | Tours Privados y Exclusivos en Japón con Guías en Español</title>
+    <meta name="description" content="Descubre el alma de Japón con guías hispanohablantes certificados. Tours 100% privados en Tokio, Kioto, Osaka e Hiroshima para viajeros que ya están en el país.">
+    
+    <!-- SEO & Open Graph Tags -->
+    <meta property="og:title" content="JaponDeCerca | Experiencias Privadas en Japón">
+    <meta property="og:description" content="Descubre Japón a tu ritmo con expertos. Exclusividad, accesos y traslados desde tu hotel.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Google Fonts: Outfit (Headings) & Quicksand (Body for soft edges) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* === CSS VARIABLES === */
+        :root {
+            --primary: #1A1A1A; /* Negro Elegante */
+            --accent: #BA1826; /* Rojo Carmesí Imperial */
+            --bg-light: #F9F9FB; /* Blanco Roto Premium */
+            --white: #FFFFFF;
+            --text-gray: #4A4A4A;
+            --radius-soft: 16px;
+            --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            --font-headings: 'Outfit', sans-serif;
+            --font-body: 'Quicksand', sans-serif;
+        }
+
+        /* === RESET & GLOBAL === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-light);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 { font-family: var(--font-headings); font-weight: 700; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* === NAVIGATION === */
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+        }
+        .logo {
+            font-family: var(--font-headings);
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .logo span { color: var(--accent); }
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+        .nav-cta:hover { background: var(--accent); }
+
+        /* === HERO SECTION === */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            color: var(--white);
+            margin-top: 70px;
+        }
+        .hero-content { max-width: 900px; }
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+            color: #E0E0E0;
+        }
+        .hero-note {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(5px);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* === INCLUSIONES === */
+        .inclusions {
+            padding: 80px 5%;
+            background: var(--white);
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50px; height: 3px;
+            background: var(--accent);
+            bottom: -10px; left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+        .grid-inclusions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .inc-card {
+            padding: 30px 20px;
+            border-radius: var(--radius-soft);
+            background: var(--bg-light);
+            transition: var(--transition);
+        }
+        .inc-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-premium); }
+        .inc-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        .inc-card h3 { margin-bottom: 10px; font-size: 1.2rem; }
+        .inc-card p { font-size: 0.95rem; color: var(--text-gray); }
+
+        /* === TOURS SECTION === */
+        .tours-section { padding: 80px 5%; max-width: 1300px; margin: 0 auto; }
+        .city-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin: 60px 0 30px;
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+        }
+        
+        .tours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .tour-card {
+            background: var(--white);
+            border-radius: var(--radius-soft);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        .tour-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-premium); }
+        
+        .tour-img {
+            width: 100%; height: 250px;
+            object-fit: cover;
+        }
+        .tour-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .tour-meta {
+            display: flex; justify-content: space-between;
+            font-size: 0.9rem; color: var(--accent); font-weight: 700; margin-bottom: 10px;
+        }
+        .tour-title { font-size: 1.4rem; margin-bottom: 15px; line-height: 1.3; }
+        .tour-desc { font-size: 0.95rem; color: var(--text-gray); margin-bottom: 25px; flex-grow: 1; }
+        
+        .tour-prices {
+            background: var(--bg-light);
+            padding: 15px; border-radius: 12px; margin-bottom: 20px;
+        }
+        .price-row {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 5px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .price-row:last-child { border-bottom: none; }
+        .price-label { font-size: 0.9rem; font-weight: 600; }
+        .price-val { font-size: 1.1rem; font-family: var(--font-headings); font-weight: 800; color: var(--primary); }
+
+        .btn-group { display: flex; gap: 10px; flex-wrap: wrap; }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+        .btn-public { background: #E8ECEF; color: var(--primary); }
+        .btn-public:hover { background: #D1D8DD; }
+        .btn-private { background: var(--primary); color: var(--white); }
+        .btn-private:hover { background: var(--accent); }
+        .btn-single { background: var(--primary); color: var(--white); width: 100%; }
+        .btn-single:hover { background: var(--accent); }
+
+        /* === CUSTOM EXPERIENCE === */
+        .custom-tour {
+            margin-top: 60px;
+            background: linear-gradient(135deg, var(--primary), #2C3E50);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: var(--radius-soft);
+        }
+        .custom-tour h2 { font-size: 2rem; margin-bottom: 15px; }
+        .custom-tour p { font-size: 1.1rem; margin-bottom: 25px; color: #D1D8DD; }
+        
+        /* === FOOTER & WHATSAPP === */
+        footer {
+            background: var(--primary); color: rgba(255,255,255,0.7);
+            text-align: center; padding: 40px 20px; margin-top: 80px;
+        }
+        footer .logo { justify-content: center; color: var(--white); margin-bottom: 20px; }
+        
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px;
+            background: #25D366; color: white;
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* === MODAL FORM === */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            display: none; justify-content: center; align-items: center;
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .modal-overlay.active { display: flex; opacity: 1; }
+        
+        .modal-box {
+            background: var(--white);
+            width: 90%; max-width: 500px;
+            padding: 40px;
+            border-radius: var(--radius-soft);
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            box-shadow: var(--shadow-premium);
+        }
+        .modal-overlay.active .modal-box { transform: translateY(0); }
+        
+        .close-modal {
+            position: absolute; top: 20px; right: 20px;
+            font-size: 1.5rem; color: var(--text-gray); cursor: pointer;
+        }
+        
+        .modal-title { font-size: 1.5rem; margin-bottom: 10px; color: var(--primary); }
+        .modal-subtitle { font-size: 0.9rem; color: var(--text-gray); margin-bottom: 25px; }
+        
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 5px; }
+        .form-control {
+            width: 100%; padding: 12px 15px;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            background: #FAFAFC;
+            transition: border 0.3s ease;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); background: var(--white); }
+        
+        .submit-btn {
+            width: 100%; padding: 15px; margin-top: 10px;
+            background: var(--accent); color: var(--white);
+            border: none; border-radius: 8px;
+            font-size: 1.1rem; font-weight: 700; font-family: var(--font-headings);
+            cursor: pointer; transition: var(--transition);
+        }
+        .submit-btn:hover { background: #9E131F; }
+
+        /* Success Message styling */
+        #success-message {
+            display: none;
+            text-align: center;
+            padding: 40px 10px;
+        }
+        #success-message i { font-size: 3rem; color: #25D366; margin-bottom: 15px; }
+        #success-message h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 10px; }
+        #success-message p { color: var(--text-gray); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .modal-box { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">japon<span>decerca</span></div>
+        <a href="#tours" class="nav-cta">Ver Experiencias</a>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre el Alma de Japón a tu Ritmo</h1>
+            <p>Experiencias privadas exclusivas con guías hispanohablantes certificados. Diseñado para viajeros exigentes que ya se encuentran en Japón.</p>
+            <div class="hero-note"><i class="fas fa-info-circle"></i> Servicios en destino. No incluye vuelos internacionales.</div>
+        </div>
+    </section>
+
+    <!-- INCLUSIONES -->
+    <section class="inclusions">
+        <h2 class="section-title">El Estándar JaponDeCerca</h2>
+        <div class="grid-inclusions">
+            <div class="inc-card">
+                <i class="fas fa-user-tie"></i>
+                <h3>Acompañamiento Experto</h3>
+                <p>Guía extranjero hispanohablante certificado y residente en Japón.</p>
+            </div>
+            <div class="inc-card">
+                <i class="fas fa-gem"></i>
+                <h3>Exclusividad Total</h3>
+                <p>Tours 100% privados y personalizados únicamente para tu grupo.</p>
+            </div>
+            <div class="inc-card">
+                <i class="fas fa-hotel"></i>
+                <h3>Logística Impecable</h3>
+                <p>Recogida cómoda a pie directamente en el lobby de tu hotel.</p>
+            </div>
+            <div class="inc-card">
+                <i class="fas fa-ticket-alt"></i>
+                <h3>Accesos Garantizados</h3>
+                <p>Todas las entradas a los lugares de interés incluidas en el itinerario.</p>
+            </div>
+            <div class="inc-card">
+                <i class="fas fa-handshake"></i>
+                <h3>Reserva Transparente</h3>
+                <p>Anticipo del 20% para confirmar. Liquidación del resto antes del inicio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOURS -->
+    <section id="tours" class="tours-section">
+        
+        <!-- KYOTO -->
+        <h2 class="city-title">Kyoto: Tradición y Patrimonio</h2>
+        <div class="tours-grid">
+            
+            <!-- Tour 1 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Calles tradicionales de Kyoto" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto</span></div>
+                    <h3 class="tour-title">1. A Explorar Kyoto: Ruta Higashiyama</h3>
+                    <p class="tour-desc">Un recorrido profundo por el distrito histórico mejor conservado. Camina por calles empedradas entre machiyas y templos del Japón feudal.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
+                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-public" onclick="openModal('1. A Explorar Kyoto: Ruta Higashiyama', 'Transporte Público')">Opción Pública</button>
+                        <button class="btn btn-private" onclick="openModal('1. A Explorar Kyoto: Ruta Higashiyama', 'Transporte Privado')">Opción Privada</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tour 2 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1598306441617-10901e8a8342?auto=format&fit=crop&w=800&q=80" alt="Ciervos sagrados en Nara" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto / Nara</span></div>
+                    <h3 class="tour-title">2. A Explorar Kyoto y Nara</h3>
+                    <p class="tour-desc">Una combinación majestuosa uniendo Kyoto con la antigua capital de Nara. Interactúa con los ciervos sagrados en libertad.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
+                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-public" onclick="openModal('2. A Explorar Kyoto y Nara', 'Transporte Público')">Opción Pública</button>
+                        <button class="btn btn-private" onclick="openModal('2. A Explorar Kyoto y Nara', 'Transporte Privado')">Opción Privada</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tour 3 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1578469645762-c8005315886b?auto=format&fit=crop&w=800&q=80" alt="Pabellón Dorado de Kioto" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto</span></div>
+                    <h3 class="tour-title">3. Kyoto: Pabellón Dorado y Arashiyama</h3>
+                    <p class="tour-desc">Contraste entre opulencia y naturaleza. Visita al resplandeciente Kinkaku-ji y sumérgete en los imponentes bosques de bambú de Arashiyama.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
+                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-public" onclick="openModal('3. Kyoto: Pabellón Dorado y Arashiyama', 'Transporte Público')">Opción Pública</button>
+                        <button class="btn btn-private" onclick="openModal('3. Kyoto: Pabellón Dorado y Arashiyama', 'Transporte Privado')">Opción Privada</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- OSAKA -->
+        <h2 class="city-title">Osaka: Metrópolis y Gastronomía</h2>
+        <div class="tours-grid">
+            
+            <!-- Tour 4 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1590559899731-a382839ce598?auto=format&fit=crop&w=800&q=80" alt="Castillo de Osaka" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Osaka</span></div>
+                    <h3 class="tour-title">4. A Explorar Osaka</h3>
+                    <p class="tour-desc">Acercamiento integral a la vibrante capital comercial de Japón. Descubre su imponente castillo y sus barrios retro-futuristas.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
+                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-public" onclick="openModal('4. A Explorar Osaka', 'Transporte Público')">Opción Pública</button>
+                        <button class="btn btn-private" onclick="openModal('4. A Explorar Osaka', 'Transporte Privado')">Opción Privada</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tour 5 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=80" alt="Comida callejera en Osaka" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Osaka</span></div>
+                    <h3 class="tour-title">5. A Comerse Osaka (Tour Gastronómico)</h3>
+                    <p class="tour-desc">Conocida como "la cocina de Japón". Degusta los mejores platos locales en un formato dinámico de comida callejera y tabernas tradicionales.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Tour a Pie Especializado</span> <span class="price-val">~$180 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-single" onclick="openModal('5. A Comerse Osaka (Gastronómico)', 'Tour Único a Pie')">Cotizar Experiencia</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tour 6 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1615865417482-eb0d50711904?auto=format&fit=crop&w=800&q=80" alt="Carne Wagyu A5 de Japón" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Osaka</span></div>
+                    <h3 class="tour-title">6. La Ruta del Wagyu A5 (Gastronómico)</h3>
+                    <p class="tour-desc">Experiencia de alta gama para paladares exigentes. Degustación del más alto grado de marmoleo (A5) combinada con exploración urbana.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Tour Culinario Exclusivo</span> <span class="price-val">~$225 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-single" onclick="openModal('6. La Ruta del Wagyu A5', 'Tour Único')">Cotizar Experiencia</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- TOKIO -->
+        <h2 class="city-title">Tokio: Vanguardia y Contrastes</h2>
+        <div class="tours-grid">
+            
+            <!-- Tour 7 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80" alt="Torre de Tokio y ciudad" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
+                    <h3 class="tour-title">7. Tokio: Armonía del Contraste</h3>
+                    <p class="tour-desc">La perfecta convivencia entre tecnología de punta, rascacielos ultramodernos y la paz de los santuarios milenarios.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
+                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-public" onclick="openModal('7. Tokio: Armonía del Contraste', 'Transporte Público')">Opción Pública</button>
+                        <button class="btn btn-private" onclick="openModal('7. Tokio: Armonía del Contraste', 'Transporte Privado')">Opción Privada</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tour 8 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1542051812871-7552ee4931d7?auto=format&fit=crop&w=800&q=80" alt="Luces de Akihabara" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
+                    <h3 class="tour-title">8. Jardines Imperiales, Akihabara y Ueno</h3>
+                    <p class="tour-desc">De la sobriedad de los terrenos imperiales al frenesí del anime en Akihabara, culminando en los mercados de Ueno.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
+                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-public" onclick="openModal('8. Jardines Imperiales, Akihabara y Ueno', 'Transporte Público')">Opción Pública</button>
+                        <button class="btn btn-private" onclick="openModal('8. Jardines Imperiales, Akihabara y Ueno', 'Transporte Privado')">Opción Privada</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tour 9 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?auto=format&fit=crop&w=800&q=80" alt="Cruce de Shibuya" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
+                    <h3 class="tour-title">9. Tokio: Asakusa, Odaiba y Shibuya</h3>
+                    <p class="tour-desc">Un viaje en el tiempo. Desde los templos de Asakusa, al futuro de Odaiba, finalizando en el icónico cruce de Shibuya y Hachiko.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
+                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-public" onclick="openModal('9. Tokio: Asakusa, Odaiba y Shibuya', 'Transporte Público')">Opción Pública</button>
+                        <button class="btn btn-private" onclick="openModal('9. Tokio: Asakusa, Odaiba y Shibuya', 'Transporte Privado')">Opción Privada</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tour 10 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1557406981-d2cc4313f8de?auto=format&fit=crop&w=800&q=80" alt="Noche cyberpunk en Tokio" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 4 Horas</span> <span>Tokio Nocturno</span></div>
+                    <h3 class="tour-title">10. Tokio: Noche de Neón</h3>
+                    <p class="tour-desc">Exploración nocturna enfocada en la estética visual cyberpunk y la vida nocturna cosmopolita de la ciudad.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$270 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-public" onclick="openModal('10. Tokio: Noche de Neón', 'Transporte Público')">Opción Pública</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tour 11 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1528360354687-839420409a6d?auto=format&fit=crop&w=800&q=80" alt="Callejón tradicional en Tokio" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 4 Horas</span> <span>Tokio</span></div>
+                    <h3 class="tour-title">11. Tokio: La Cara Antigua</h3>
+                    <p class="tour-desc">Un retiro del ritmo vertiginoso para conectar con el Shitamachi, descubriendo callejones y la atmósfera del Tokio de antaño.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$270 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-public" onclick="openModal('11. Tokio: La Cara Antigua', 'Transporte Público')">Opción Pública</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tour 12 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1558231908-04fcb07f8796?auto=format&fit=crop&w=800&q=80" alt="Comida gourmet en Tokio" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Tokio Premium</span></div>
+                    <h3 class="tour-title">12. A Comerse Tokio: Ruta Nakameguro</h3>
+                    <p class="tour-desc">Travesía culinaria premium a lo largo del elegante distrito de Nakameguro. Degusta propuestas sofisticadas de la gastronomía tokiota.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Tour Culinario Exclusivo</span> <span class="price-val">~$900 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-single" onclick="openModal('12. A Comerse Tokio: Ruta Nakameguro', 'Tour Único')">Cotizar Experiencia</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- HIROSHIMA -->
+        <h2 class="city-title">Hiroshima: Resiliencia y Paz</h2>
+        <div class="tours-grid">
+            <!-- Tour 13 -->
+            <article class="tour-card">
+                <img src="https://images.unsplash.com/photo-1513622470522-26c308a55ce6?auto=format&fit=crop&w=800&q=80" alt="Torii de Miyajima en Hiroshima" class="tour-img">
+                <div class="tour-content">
+                    <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Hiroshima / Miyajima</span></div>
+                    <h3 class="tour-title">13. A Explorar Hiroshima y Miyajima</h3>
+                    <p class="tour-desc">Un día emotivo y escénico. Inicia en el Parque de la Paz y continúa hacia la isla sagrada de Miyajima y su majestuoso torii flotante.</p>
+                    <div class="tour-prices">
+                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-public" onclick="openModal('13. A Explorar Hiroshima y Miyajima', 'Transporte Público')">Opción Pública</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- CTA EXPERIENCIAS A MEDIDA -->
+        <div class="custom-tour">
+            <h2>¿No encuentras lo que buscas?</h2>
+            <p>Si deseas vivir una experiencia que no se encuentra listada, escríbenos. Diseñamos itinerarios completamente a medida según tus gustos y preferencias.</p>
+            <a href="https://wa.me/50769852181" target="_blank" class="nav-cta" style="display:inline-block; margin-top:10px;"><i class="fab fa-whatsapp"></i> Consultar por WhatsApp</a>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="logo">japon<span>decerca</span></div>
+        <p>Servicios exclusivos en destino. Japón, a tu manera.</p>
+        <p style="margin-top: 20px; font-size: 0.8rem; color: rgba(255,255,255,0.5);">© 2026 JaponDeCerca. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/50769852181" class="whatsapp-float" target="_blank" title="Consultar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- MODAL FORM -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-box">
+            <span class="close-modal" onclick="closeModal()"><i class="fas fa-times"></i></span>
+            
+            <!-- FORMULARIO -->
+            <div id="booking-form-container">
+                <h3 class="modal-title">Cotizar Experiencia</h3>
+                <p class="modal-subtitle">Complete los datos y le enviaremos la información detallada.</p>
+                
+                <form id="tour-form" onsubmit="processForm(event)">
+                    <input type="hidden" id="tour-interest" name="tour-interest">
+                    
+                    <div class="form-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" id="fname" class="form-control" required placeholder="Ej. Juan Pérez">
+                    </div>
+                    <div class="form-group">
+                        <label>País desde el que viaja</label>
+                        <input type="text" id="country" class="form-control" required placeholder="Ej. España, México...">
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha deseada del tour</label>
+                        <input type="date" id="date" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Número de WhatsApp (con código de país)</label>
+                        <input type="tel" id="whatsapp" class="form-control" required placeholder="+34 600 000 000">
+                    </div>
+                    <div class="form-group">
+                        <label>Número de personas</label>
+                        <input type="number" id="pax" class="form-control" min="1" required placeholder="Ej. 2">
+                    </div>
+                    <div class="form-group">
+                        <label>Comentarios adicionales (Opcional)</label>
+                        <textarea id="comments" class="form-control" rows="3" placeholder="Restricciones alimenticias, peticiones especiales..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Solicitar Cotización</button>
+                </form>
+            </div>
+
+            <!-- MENSAJE DE ÉXITO -->
+            <div id="success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>¡Solicitud Recibida!</h3>
+                <p>Le estaremos enviando la información a la mayor brevedad.</p>
+                <button class="btn btn-public" style="margin-top:20px; width:100%;" onclick="closeModal()">Cerrar Ventana</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        const modal = document.getElementById('modal');
+        const formContainer = document.getElementById('booking-form-container');
+        const successMessage = document.getElementById('success-message');
+        const tourInput = document.getElementById('tour-interest');
+
+        function openModal(tourName, optionName) {
+            // Reset modal state
+            formContainer.style.display = 'block';
+            successMessage.style.display = 'none';
+            document.getElementById('tour-form').reset();
+            
+            tourInput.value = `${tourName} (${optionName})`;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        // Cierra modal al hacer click fuera del box
+        modal.addEventListener('click', function(e) {
+            if(e.target === modal) {
+                closeModal();
+            }
+        });
+
+        function processForm(e) {
+            e.preventDefault();
+            
+            // Recopilar datos
+            const tour = tourInput.value;
+            const name = document.getElementById('fname').value;
+            const country = document.getElementById('country').value;
+            const date = document.getElementById('date').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const pax = document.getElementById('pax').value;
+            const comments = document.getElementById('comments').value;
+
+            // Construir el cuerpo del correo (para usar un mailto client-side como solución HTML estática)
+            const subject = encodeURIComponent(`Cotización de Tour: ${tour} - ${name}`);
+            const body = encodeURIComponent(
+                `Hola equipo JaponDeCerca,\n\n` +
+                `Deseo cotizar la siguiente experiencia:\n` +
+                `Tour: ${tour}\n\n` +
+                `Mis datos:\n` +
+                `- Nombre: ${name}\n` +
+                `- País: ${country}\n` +
+                `- Fecha del Tour: ${date}\n` +
+                `- WhatsApp: ${whatsapp}\n` +
+                `- Número de Personas: ${pax}\n` +
+                `- Comentarios: ${comments}\n\n` +
+                `Quedo atento a la información.`
+            );
+
+            // Intentar abrir el cliente de correo
+            window.location.href = `mailto:rubencedeno07@gmail.com?subject=${subject}&body=${body}`;
+
+            // Mostrar el mensaje visual (Neuromarketing de recompensa instantánea)
+            formContainer.style.display = 'none';
+            successMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
