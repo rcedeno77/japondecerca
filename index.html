@@ -126,9 +126,11 @@
         }
 
         /* === INCLUSIONES === */
-        .inclusions {
-            padding: 80px 5%;
+        .inclusions-wrapper {
             background: var(--white);
+            padding: 80px 5% 0; /* Quitamos el padding inferior para evitar huecos */
+        }
+        .inclusions {
             text-align: center;
         }
         .section-title {
@@ -147,21 +149,20 @@
             border-radius: 5px;
         }
         
-        /* Ajuste de Grid para 4 elementos sin espacios vacíos */
+        /* Ajuste definitivo del grid para eliminar espacios en blanco */
         .grid-inclusions {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
-        }
-        @media (min-width: 1024px) {
-            .grid-inclusions {
-                grid-template-columns: repeat(4, 1fr);
-            }
+            padding-bottom: 60px; /* Separación con la siguiente sección */
         }
         
         .inc-card {
+            flex: 1 1 240px; /* Flexbox para que se adapten perfectamente */
+            max-width: 280px; /* Limite de ancho para que no se estiren demasiado */
             padding: 30px 20px;
             border-radius: var(--radius-soft);
             background: var(--bg-light);
@@ -177,7 +178,7 @@
         .inc-card p { font-size: 0.95rem; color: var(--text-gray); }
 
         /* === TOURS SECTION === */
-        .tours-section { padding: 80px 5%; max-width: 1300px; margin: 0 auto; }
+        .tours-section { padding: 40px 5% 80px; max-width: 1300px; margin: 0 auto; }
         .city-title {
             font-size: 2rem;
             color: var(--primary);
@@ -188,7 +189,7 @@
         
         .tours-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 40px;
         }
 
@@ -230,7 +231,8 @@
             padding: 5px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
         }
         .price-row:last-child { border-bottom: none; }
-        .price-label { font-size: 0.9rem; font-weight: 600; }
+        .price-label { font-size: 0.85rem; font-weight: 600; display: flex; flex-direction: column;}
+        .price-sublabel { font-size: 0.75rem; color: #777; font-weight: 400;}
         .price-val { font-size: 1.1rem; font-family: var(--font-headings); font-weight: 800; color: var(--primary); }
 
         .btn-group { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -350,6 +352,7 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .modal-box { padding: 30px 20px; }
+            .tours-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -375,32 +378,34 @@
         </div>
     </section>
 
-    <!-- INCLUSIONES -->
-    <section class="inclusions">
-        <h2 class="section-title">El Estándar JaponDeCerca</h2>
-        <div class="grid-inclusions">
-            <div class="inc-card">
-                <i class="fas fa-user-tie"></i>
-                <h3>Acompañamiento Experto</h3>
-                <p>Guía extranjero hispanohablante certificado y residente en Japón.</p>
+    <!-- INCLUSIONES (Ajustado para no dejar espacio vacío) -->
+    <div class="inclusions-wrapper">
+        <section class="inclusions">
+            <h2 class="section-title">El Estándar JaponDeCerca</h2>
+            <div class="grid-inclusions">
+                <div class="inc-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Acompañamiento Experto</h3>
+                    <p>Guía extranjero hispanohablante certificado y residente en Japón.</p>
+                </div>
+                <div class="inc-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Exclusividad Total</h3>
+                    <p>Tours 100% privados y personalizados únicamente para tu grupo.</p>
+                </div>
+                <div class="inc-card">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>Accesos Garantizados</h3>
+                    <p>Todas las entradas a los lugares de interés incluidas en el itinerario.</p>
+                </div>
+                <div class="inc-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Reserva Transparente</h3>
+                    <p>Anticipo del 20% para confirmar. Liquidación del resto antes del inicio.</p>
+                </div>
             </div>
-            <div class="inc-card">
-                <i class="fas fa-gem"></i>
-                <h3>Exclusividad Total</h3>
-                <p>Tours 100% privados y personalizados únicamente para tu grupo.</p>
-            </div>
-            <div class="inc-card">
-                <i class="fas fa-ticket-alt"></i>
-                <h3>Accesos Garantizados</h3>
-                <p>Todas las entradas a los lugares de interés incluidas en el itinerario.</p>
-            </div>
-            <div class="inc-card">
-                <i class="fas fa-handshake"></i>
-                <h3>Reserva Transparente</h3>
-                <p>Anticipo del 20% para confirmar. Liquidación del resto antes del inicio.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- TOURS -->
     <section id="tours" class="tours-section">
@@ -417,8 +422,14 @@
                     <h3 class="tour-title">1. A Explorar Kyoto: Ruta Higashiyama</h3>
                     <p class="tour-desc">Un recorrido profundo por el distrito histórico mejor conservado. Camina por calles empedradas entre machiyas y templos del Japón feudal.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
-                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Público <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$376 USD</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Privado <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$764 USD</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('1. A Explorar Kyoto: Ruta Higashiyama', 'Transporte Público')">Opción Pública</button>
@@ -435,8 +446,14 @@
                     <h3 class="tour-title">2. A Explorar Kyoto y Nara</h3>
                     <p class="tour-desc">Una combinación majestuosa uniendo Kyoto con la antigua capital de Nara. Interactúa con los ciervos sagrados en libertad.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
-                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Público <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$376 USD</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Privado <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$764 USD</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('2. A Explorar Kyoto y Nara', 'Transporte Público')">Opción Pública</button>
@@ -453,8 +470,14 @@
                     <h3 class="tour-title">3. Kyoto: Pabellón Dorado y Arashiyama</h3>
                     <p class="tour-desc">Contraste entre opulencia y naturaleza. Visita al resplandeciente Kinkaku-ji y sumérgete en los imponentes bosques de bambú de Arashiyama.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
-                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Público <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$376 USD</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Privado <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$764 USD</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('3. Kyoto: Pabellón Dorado y Arashiyama', 'Transporte Público')">Opción Pública</button>
@@ -476,8 +499,14 @@
                     <h3 class="tour-title">4. A Explorar Osaka</h3>
                     <p class="tour-desc">Acercamiento integral a la vibrante capital comercial de Japón. Descubre su imponente castillo y sus barrios retro-futuristas.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
-                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Público <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$376 USD</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Privado <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$764 USD</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('4. A Explorar Osaka', 'Transporte Público')">Opción Pública</button>
@@ -486,15 +515,19 @@
                 </div>
             </article>
 
-            <!-- Tour 5 -->
+            <!-- Tour 5 (Gastronómico) -->
             <article class="tour-card">
                 <img src="acomerseosaka.jpg" alt="Comida callejera en Osaka" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Osaka</span></div>
                     <h3 class="tour-title">5. A Comerse Osaka (Tour Gastronómico)</h3>
-                    <p class="tour-desc">Conocida como "la cocina de Japón". Degusta los mejores platos locales en un formato dinámico de comida callejera y tabernas tradicionales.</p>
+                    <p class="tour-desc">Conocida como "la cocina de Japón". Degusta los mejores platos locales en un formato dinámico de comida callejera y tabernas.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Tour a Pie Especializado</span> <span class="price-val">~$180 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Tour a Pie <span class="price-sublabel">Precio por persona</span></span> 
+                            <span class="price-val">~$180 USD</span>
+                        </div>
+                        <div style="font-size: 0.75rem; color: var(--accent); margin-top: 5px; text-align: right;">*Tarifas especiales para grupos grandes</div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-single" onclick="openModal('5. A Comerse Osaka (Gastronómico)', 'Tour Único a Pie')">Cotizar Experiencia</button>
@@ -510,7 +543,10 @@
                     <h3 class="tour-title">6. La Ruta del Wagyu A5 (Gastronómico)</h3>
                     <p class="tour-desc">Experiencia de alta gama para paladares exigentes. Degustación del más alto grado de marmoleo (A5) combinada con exploración urbana.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Tour Culinario Exclusivo</span> <span class="price-val">~$225 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Tour Exclusivo <span class="price-sublabel">Precio a consultar</span></span> 
+                            <span class="price-val">Personalizado</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-single" onclick="openModal('6. La Ruta del Wagyu A5', 'Tour Único')">Cotizar Experiencia</button>
@@ -523,16 +559,22 @@
         <h2 class="city-title">Tokio: Vanguardia y Contrastes</h2>
         <div class="tours-grid">
             
-            <!-- Tour 7 (Mantenemos externa por ahora) -->
+            <!-- Tour 7 -->
             <article class="tour-card">
-                <img src="tokiodenoche.avif">
+                <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800&auto=format&fit=crop" alt="Torre de Tokio y ciudad" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">7. Tokio: Armonía del Contraste</h3>
                     <p class="tour-desc">La perfecta convivencia entre tecnología de punta, rascacielos ultramodernos y la paz de los santuarios milenarios.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
-                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Público <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$376 USD</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Privado <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$764 USD</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('7. Tokio: Armonía del Contraste', 'Transporte Público')">Opción Pública</button>
@@ -549,8 +591,14 @@
                     <h3 class="tour-title">8. Jardines Imperiales, Akihabara y Ueno</h3>
                     <p class="tour-desc">De la sobriedad de los terrenos imperiales al frenesí del anime en Akihabara, culminando en los mercados de Ueno.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
-                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Público <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$376 USD</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Privado <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$764 USD</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('8. Jardines Imperiales, Akihabara y Ueno', 'Transporte Público')">Opción Pública</button>
@@ -559,16 +607,22 @@
                 </div>
             </article>
 
-            <!-- Tour 9 (Mantenemos externa por ahora) -->
+            <!-- Tour 9 -->
             <article class="tour-card">
-                <img src="shibuya.jpg" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=800&auto=format&fit=crop" alt="Cruce de Shibuya" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">9. Tokio: Asakusa, Odaiba y Shibuya</h3>
                     <p class="tour-desc">Un viaje en el tiempo. Desde los templos de Asakusa, al futuro de Odaiba, finalizando en el icónico cruce de Shibuya y Hachiko.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
-                        <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">~$765 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Público <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$376 USD</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Privado <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$764 USD</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('9. Tokio: Asakusa, Odaiba y Shibuya', 'Transporte Público')">Opción Pública</button>
@@ -577,15 +631,18 @@
                 </div>
             </article>
 
-            <!-- Tour 10 (Mantenemos externa por ahora) -->
+            <!-- Tour 10 -->
             <article class="tour-card">
-                <img src="tokioneon.jpg" class="tour-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Kabukicho_red_gate_and_neon_street_at_night%2C_Shinjuku%2C_Tokyo.jpg/800px-Kabukicho_red_gate_and_neon_street_at_night%2C_Shinjuku%2C_Tokyo.jpg" alt="Noche cyberpunk en Tokio" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 4 Horas</span> <span>Tokio Nocturno</span></div>
                     <h3 class="tour-title">10. Tokio: Noche de Neón</h3>
                     <p class="tour-desc">Exploración nocturna enfocada en la estética visual cyberpunk y la vida nocturna cosmopolita de la ciudad.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$270 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Público <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$270 USD</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('10. Tokio: Noche de Neón', 'Transporte Público')">Opción Pública</button>
@@ -601,7 +658,10 @@
                     <h3 class="tour-title">11. Tokio: La Cara Antigua</h3>
                     <p class="tour-desc">Un retiro del ritmo vertiginoso para conectar con el Shitamachi, descubriendo callejones y la atmósfera del Tokio de antaño.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$270 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Público <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$270 USD</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('11. Tokio: La Cara Antigua', 'Transporte Público')">Opción Pública</button>
@@ -609,15 +669,19 @@
                 </div>
             </article>
 
-            <!-- Tour 12 (Mantenemos externa por ahora) -->
+            <!-- Tour 12 (Gastronómico) -->
             <article class="tour-card">
-                <img src="nakameguro.jpg" class="tour-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Sushi_platter.jpg/800px-Sushi_platter.jpg" alt="Comida gourmet en Tokio" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Tokio Premium</span></div>
                     <h3 class="tour-title">12. A Comerse Tokio: Ruta Nakameguro</h3>
                     <p class="tour-desc">Travesía culinaria premium a lo largo del elegante distrito de Nakameguro. Degusta propuestas sofisticadas de la gastronomía tokiota.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Tour Culinario Exclusivo</span> <span class="price-val">~$900 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Tour Culinario <span class="price-sublabel">Precio por persona</span></span> 
+                            <span class="price-val">~$227 USD</span>
+                        </div>
+                        <div style="font-size: 0.75rem; color: var(--accent); margin-top: 5px; text-align: right;">*Tarifas especiales para grupos grandes</div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-single" onclick="openModal('12. A Comerse Tokio: Ruta Nakameguro', 'Tour Único')">Cotizar Experiencia</button>
@@ -626,7 +690,7 @@
             </article>
         </div>
 
-        <!-- HIROSHIMA -->
+        <!-- HIROSHIMA (Ahora con el mismo grid) -->
         <h2 class="city-title">Hiroshima: Resiliencia y Paz</h2>
         <div class="tours-grid">
             <!-- Tour 13 -->
@@ -637,7 +701,10 @@
                     <h3 class="tour-title">13. A Explorar Hiroshima y Miyajima</h3>
                     <p class="tour-desc">Un día emotivo y escénico. Inicia en el Parque de la Paz y continúa hacia la isla sagrada de Miyajima y su majestuoso torii flotante.</p>
                     <div class="tour-prices">
-                        <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">~$375 USD</span></div>
+                        <div class="price-row">
+                            <span class="price-label">Transporte Público <span class="price-sublabel">Base (1 a 5 pax)</span></span> 
+                            <span class="price-val">~$376 USD</span>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('13. A Explorar Hiroshima y Miyajima', 'Transporte Público')">Opción Pública</button>
