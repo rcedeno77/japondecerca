@@ -189,7 +189,7 @@
         
         /* PRECIOS */
         .tour-prices {
-            background: #F8F9FA; padding: 10px; border-radius: 8px; margin-bottom: 12px;
+            background: #F8F9FA; padding: 10px; border-radius: 8px; margin-bottom: 10px;
         }
         .price-row {
             display: flex; justify-content: space-between; align-items: center;
@@ -199,6 +199,17 @@
         .price-label { font-size: 0.75rem; font-weight: 600; color: var(--text-gray); }
         .price-val { font-size: 0.95rem; font-family: var(--font-headings); font-weight: 800; color: var(--primary); }
         .price-note { font-size: 0.65rem; color: #888; text-align: center; margin-top: 5px; font-style: italic; }
+
+        /* TEXTO DE VERIFICAR DISPONIBILIDAD */
+        .availability-text {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
         /* BOTONES */
         .btn-group { display: flex; gap: 8px; flex-wrap: nowrap; }
@@ -363,9 +374,10 @@
                         <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">$764 USD</span></div>
                         <div class="price-note">*Precio base para grupos de 1 a 5 personas</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
-                        <button class="btn btn-public" onclick="openModal('1. A Explorar Kyoto: Ruta Higashiyama', 'Transporte Público')">Opción Pública</button>
-                        <button class="btn btn-private" onclick="openModal('1. A Explorar Kyoto: Ruta Higashiyama', 'Transporte Privado')">Opción Privada</button>
+                        <button class="btn btn-public" onclick="openModal('1. Kioto: Ruta Higashiyama', 'Transporte Público')">Opción Pública</button>
+                        <button class="btn btn-private" onclick="openModal('1. Kioto: Ruta Higashiyama', 'Transporte Privado')">Opción Privada</button>
                     </div>
                 </div>
             </article>
@@ -385,9 +397,10 @@
                         <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">$764 USD</span></div>
                         <div class="price-note">*Precio base para grupos de 1 a 5 personas</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
-                        <button class="btn btn-public" onclick="openModal('2. A Explorar Kyoto y Nara', 'Transporte Público')">Opción Pública</button>
-                        <button class="btn btn-private" onclick="openModal('2. A Explorar Kyoto y Nara', 'Transporte Privado')">Opción Privada</button>
+                        <button class="btn btn-public" onclick="openModal('2. Kioto y Nara', 'Transporte Público')">Opción Pública</button>
+                        <button class="btn btn-private" onclick="openModal('2. Kioto y Nara', 'Transporte Privado')">Opción Privada</button>
                     </div>
                 </div>
             </article>
@@ -407,9 +420,10 @@
                         <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">$764 USD</span></div>
                         <div class="price-note">*Precio base para grupos de 1 a 5 personas</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
-                        <button class="btn btn-public" onclick="openModal('3. Kyoto: Pabellón Dorado y Arashiyama', 'Transporte Público')">Opción Pública</button>
-                        <button class="btn btn-private" onclick="openModal('3. Kyoto: Pabellón Dorado y Arashiyama', 'Transporte Privado')">Opción Privada</button>
+                        <button class="btn btn-public" onclick="openModal('3. Kioto: Pabellón Dorado y Arashiyama', 'Transporte Público')">Opción Pública</button>
+                        <button class="btn btn-private" onclick="openModal('3. Kioto: Pabellón Dorado y Arashiyama', 'Transporte Privado')">Opción Privada</button>
                     </div>
                 </div>
             </article>
@@ -429,6 +443,7 @@
                         <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">$764 USD</span></div>
                         <div class="price-note">*Precio base para grupos de 1 a 5 personas</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('4. A Explorar Osaka', 'Transporte Público')">Opción Pública</button>
                         <button class="btn btn-private" onclick="openModal('4. A Explorar Osaka', 'Transporte Privado')">Opción Privada</button>
@@ -436,7 +451,7 @@
                 </div>
             </article>
 
-            <!-- 5. Gastronómico Osaka (Doble Tag) -->
+            <!-- 5. Gastronómico Osaka -->
             <article class="tour-card" data-category="osaka gastronomia">
                 <div class="img-container">
                     <span class="city-badge">Osaka (Gastronomía)</span>
@@ -450,13 +465,14 @@
                         <div class="price-row"><span class="price-label">Tour Culinario a Pie</span> <span class="price-val">$180 USD</span></div>
                         <div class="price-note">*Precio por persona. Tarifas especiales para grupos.</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
-                        <button class="btn btn-single" onclick="openModal('5. A Comerse Osaka (Gastronómico)', 'Tour Único')">Cotizar Experiencia</button>
+                        <button class="btn btn-single" onclick="openModal('5. A Comerse Osaka (Gastronómico)', 'Tour Único')">Verificar disponibilidad y cotizar</button>
                     </div>
                 </div>
             </article>
 
-            <!-- 6. Gastronómico Wagyu (Doble Tag) -->
+            <!-- 6. Gastronómico Wagyu -->
             <article class="tour-card" data-category="osaka gastronomia">
                 <div class="img-container">
                     <span class="city-badge">Osaka (Gastronomía)</span>
@@ -470,8 +486,9 @@
                         <div class="price-row"><span class="price-label">Tour Exclusivo</span> <span class="price-val">$227 USD</span></div>
                         <div class="price-note">*Precio por persona. Tarifas especiales para grupos.</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
-                        <button class="btn btn-single" onclick="openModal('6. La Ruta del Wagyu A5', 'Tour Único')">Cotizar Experiencia</button>
+                        <button class="btn btn-single" onclick="openModal('6. La Ruta del Wagyu A5', 'Tour Único')">Verificar disponibilidad y cotizar</button>
                     </div>
                 </div>
             </article>
@@ -491,6 +508,7 @@
                         <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">$764 USD</span></div>
                         <div class="price-note">*Precio base para grupos de 1 a 5 personas</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('7. Tokio: Armonía del Contraste', 'Transporte Público')">Opción Pública</button>
                         <button class="btn btn-private" onclick="openModal('7. Tokio: Armonía del Contraste', 'Transporte Privado')">Opción Privada</button>
@@ -513,6 +531,7 @@
                         <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">$764 USD</span></div>
                         <div class="price-note">*Precio base para grupos de 1 a 5 personas</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('8. Jardines Imperiales, Akihabara y Ueno', 'Transporte Público')">Opción Pública</button>
                         <button class="btn btn-private" onclick="openModal('8. Jardines Imperiales, Akihabara y Ueno', 'Transporte Privado')">Opción Privada</button>
@@ -535,6 +554,7 @@
                         <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">$764 USD</span></div>
                         <div class="price-note">*Precio base para grupos de 1 a 5 personas</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('9. Tokio: Asakusa, Odaiba y Shibuya', 'Transporte Público')">Opción Pública</button>
                         <button class="btn btn-private" onclick="openModal('9. Tokio: Asakusa, Odaiba y Shibuya', 'Transporte Privado')">Opción Privada</button>
@@ -557,6 +577,7 @@
                         <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">$764 USD</span></div>
                         <div class="price-note">*Precio base para grupos de 1 a 5 personas</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('10. Tokio: Noche de Neón', 'Transporte Público')">Opción Pública</button>
                         <button class="btn btn-private" onclick="openModal('10. Tokio: Noche de Neón', 'Transporte Privado')">Opción Privada</button>
@@ -579,6 +600,7 @@
                         <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">$764 USD</span></div>
                         <div class="price-note">*Precio base para grupos de 1 a 5 personas</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('11. Tokio: La Cara Antigua', 'Transporte Público')">Opción Pública</button>
                         <button class="btn btn-private" onclick="openModal('11. Tokio: La Cara Antigua', 'Transporte Privado')">Opción Privada</button>
@@ -586,7 +608,7 @@
                 </div>
             </article>
 
-            <!-- 12. Gastronómico Tokio (Doble Tag) -->
+            <!-- 12. Gastronómico Tokio -->
             <article class="tour-card" data-category="tokio gastronomia">
                 <div class="img-container">
                     <span class="city-badge">Tokio (Gastronomía)</span>
@@ -600,8 +622,9 @@
                         <div class="price-row"><span class="price-label">Tour Culinario</span> <span class="price-val">$227 USD</span></div>
                         <div class="price-note">*Precio por persona. Tarifas especiales para grupos.</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
-                        <button class="btn btn-single" onclick="openModal('12. A Comerse Tokio: Ruta Nakameguro', 'Tour Único')">Cotizar Experiencia</button>
+                        <button class="btn btn-single" onclick="openModal('12. A Comerse Tokio: Ruta Nakameguro', 'Tour Único')">Verificar disponibilidad y cotizar</button>
                     </div>
                 </div>
             </article>
@@ -615,12 +638,13 @@
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span></div>
                     <h3 class="tour-title">13. Hiroshima y Miyajima</h3>
-                    <p class="tour-desc">Un día emotivo y escénico. Inicia en el Parque de la Paz y continúa hacia la isla sagrada de Miyajima y su majestuoso torii flotante.</p>
+                    <p class="tour-desc">Un día emotivo y escénico. Inicia con la historia de resiliencia en el Parque de la Paz y continúa hacia la isla sagrada de Miyajima.</p>
                     <div class="tour-prices">
                         <div class="price-row"><span class="price-label">Transporte Público</span> <span class="price-val">$376 USD</span></div>
                         <div class="price-row"><span class="price-label">Transporte Privado</span> <span class="price-val">$764 USD</span></div>
                         <div class="price-note">*Precio base para grupos de 1 a 5 personas</div>
                     </div>
+                    <div class="availability-text">Verificar disponibilidad</div>
                     <div class="btn-group">
                         <button class="btn btn-public" onclick="openModal('13. A Explorar Hiroshima y Miyajima', 'Transporte Público')">Opción Pública</button>
                         <button class="btn btn-private" onclick="openModal('13. A Explorar Hiroshima y Miyajima', 'Transporte Privado')">Opción Privada</button>
@@ -645,7 +669,7 @@
             <svg class="isotype" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 6h16M5 10h14M8 6v14M16 6v14M9 14h6"/>
             </svg>
-            japon <span style="margin-left: 8px;">de cerca</span>
+            japon <span>de cerca</span>
         </div>
         <p>Servicios exclusivos en destino. Japón, a tu manera.</p>
         <p style="margin-top: 15px; font-size: 0.75rem; color: rgba(255,255,255,0.4);">© 2026 Japón de Cerca. Todos los derechos reservados.</p>
@@ -665,35 +689,35 @@
                 <h3 class="modal-title">Cotizar Experiencia</h3>
                 <p class="modal-subtitle">Complete los datos y le enviaremos la información detallada.</p>
                 
-                <form id="tour-form" onsubmit="processForm(event)">
-                    <input type="hidden" id="tour-interest" name="tour-interest">
+                <form id="tour-form" action="https://formspree.io/f/mdekyepo" method="POST" onsubmit="submitFormWithAjax(event)">
+                    <input type="hidden" id="tour-interest" name="tour_seleccionado">
                     
                     <div class="form-group">
-                        <label>Nombre Completo</label>
-                        <input type="text" id="fname" class="form-control" required placeholder="Ej. Juan Pérez">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required placeholder="Ej. Juan Pérez">
                     </div>
                     <div class="form-group">
-                        <label>País desde el que viaja</label>
-                        <input type="text" id="country" class="form-control" required placeholder="Ej. España, México...">
+                        <label for="pais">País desde el que viaja</label>
+                        <input type="text" id="pais" name="pais" class="form-control" required placeholder="Ej. España, México...">
                     </div>
                     <div class="form-group">
-                        <label>Fecha deseada del tour</label>
-                        <input type="date" id="date" class="form-control" required>
+                        <label for="fecha">Fecha deseada del tour</label>
+                        <input type="date" id="fecha" name="fecha" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Número de WhatsApp (con código de país)</label>
-                        <input type="tel" id="whatsapp" class="form-control" required placeholder="+34 600 000 000">
+                        <label for="whatsapp">Número de WhatsApp (con código de país)</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" class="form-control" required placeholder="+34 600 000 000">
                     </div>
                     <div class="form-group">
-                        <label>Número de personas</label>
-                        <input type="number" id="pax" class="form-control" min="1" required placeholder="Ej. 2">
+                        <label for="personas">Número de personas</label>
+                        <input type="number" id="personas" name="personas" class="form-control" min="1" required placeholder="Ej. 2">
                     </div>
                     <div class="form-group">
-                        <label>Comentarios adicionales (Opcional)</label>
-                        <textarea id="comments" class="form-control" rows="2" placeholder="Restricciones alimenticias, peticiones..."></textarea>
+                        <label for="comentarios">Comentarios adicionales (Opcional)</label>
+                        <textarea id="comentarios" name="comentarios" class="form-control" rows="2" placeholder="Restricciones alimenticias, peticiones..."></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-btn">Solicitar Cotización</button>
+                    <button type="submit" class="submit-btn" id="submit-button">Solicitar Cotización</button>
                 </form>
             </div>
 
@@ -708,27 +732,22 @@
 
     <!-- SCRIPTS -->
     <script>
-        // === SCRIPT PARA EL MENÚ DE FILTROS (MÚLTIPLES CATEGORÍAS) ===
         document.addEventListener('DOMContentLoaded', () => {
             const filterBtns = document.querySelectorAll('.filter-btn');
             const tourCards = document.querySelectorAll('.tour-card');
 
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Remover clase active de todos los botones
                     filterBtns.forEach(b => b.classList.remove('active'));
-                    // Añadir clase active al botón clickeado
                     btn.classList.add('active');
                     
                     const filter = btn.getAttribute('data-filter');
                     
                     tourCards.forEach(card => {
-                        // Reiniciar la animación de entrada
                         card.style.animation = 'none';
-                        card.offsetHeight; /* Trigger reflow */
+                        card.offsetHeight; 
                         card.style.animation = null; 
 
-                        // Lógica Cross-Tagging (Separamos las categorías por espacio)
                         const categories = card.getAttribute('data-category').split(' ');
                         
                         if(filter === 'all' || categories.includes(filter)) {
@@ -741,16 +760,18 @@
             });
         });
 
-        // === SCRIPT PARA EL MODAL DE COTIZACIÓN ===
         const modal = document.getElementById('modal');
         const formContainer = document.getElementById('booking-form-container');
         const successMessage = document.getElementById('success-message');
         const tourInput = document.getElementById('tour-interest');
+        const submitBtn = document.getElementById('submit-button');
 
         function openModal(tourName, optionName) {
             formContainer.style.display = 'block';
             successMessage.style.display = 'none';
             document.getElementById('tour-form').reset();
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Solicitar Cotización";
             
             tourInput.value = `${tourName} (${optionName})`;
             modal.classList.add('active');
@@ -766,36 +787,36 @@
             }
         });
 
-        function processForm(e) {
-            e.preventDefault();
+        async function submitFormWithAjax(event) {
+            event.preventDefault();
+            const form = event.target;
+            const data = new FormData(form);
             
-            const tour = tourInput.value;
-            const name = document.getElementById('fname').value;
-            const country = document.getElementById('country').value;
-            const date = document.getElementById('date').value;
-            const whatsapp = document.getElementById('whatsapp').value;
-            const pax = document.getElementById('pax').value;
-            const comments = document.getElementById('comments').value;
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Enviando solicitud...";
 
-            const subject = encodeURIComponent(`Cotización de Tour: ${tour} - ${name}`);
-            const body = encodeURIComponent(
-                `Hola equipo Japón de Cerca,\n\n` +
-                `Deseo cotizar la siguiente experiencia:\n` +
-                `Tour: ${tour}\n\n` +
-                `Mis datos:\n` +
-                `- Nombre: ${name}\n` +
-                `- País: ${country}\n` +
-                `- Fecha del Tour: ${date}\n` +
-                `- WhatsApp: ${whatsapp}\n` +
-                `- Número de Personas: ${pax}\n` +
-                `- Comentarios: ${comments}\n\n` +
-                `Quedo atento a la información.`
-            );
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'json'
+                    }
+                });
 
-            window.location.href = `mailto:rubencedeno07@gmail.com?subject=${subject}&body=${body}`;
-
-            formContainer.style.display = 'none';
-            successMessage.style.display = 'block';
+                if (response.ok) {
+                    formContainer.style.display = 'none';
+                    successMessage.style.display = 'block';
+                } else {
+                    alert("Hubo un problema al enviar su solicitud. Por favor intente de nuevo o contáctenos por WhatsApp.");
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Solicitar Cotización";
+                }
+            } catch (error) {
+                alert("Error de conexión. Verifique su red e intente nuevamente.");
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Solicitar Cotización";
+            }
         }
     </script>
 </body>
