@@ -94,7 +94,7 @@
         /* === HERO SECTION === */
         .hero {
             height: 90vh;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/1829980/pexels-photo-1829980.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=1920&auto=format&fit=crop') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -127,7 +127,7 @@
 
         /* === INCLUSIONES === */
         .inclusions {
-            padding: 80px 5% 30px; /* Reducido el padding inferior para eliminar el gran espacio en blanco */
+            padding: 80px 5%;
             background: var(--white);
             text-align: center;
         }
@@ -146,13 +146,21 @@
             transform: translateX(-50%);
             border-radius: 5px;
         }
+        
+        /* Ajuste de Grid para 4 elementos sin espacios vacíos */
         .grid-inclusions {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Ajustado para que 4 elementos se vean perfectamente centrados y estéticos */
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
         }
+        @media (min-width: 1024px) {
+            .grid-inclusions {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
         .inc-card {
             padding: 30px 20px;
             border-radius: var(--radius-soft);
@@ -169,15 +177,11 @@
         .inc-card p { font-size: 0.95rem; color: var(--text-gray); }
 
         /* === TOURS SECTION === */
-        .tours-section { 
-            padding: 20px 5% 80px; /* Reducido el padding superior para conectar suavemente con las inclusiones */
-            max-width: 1300px; 
-            margin: 0 auto; 
-        }
+        .tours-section { padding: 80px 5%; max-width: 1300px; margin: 0 auto; }
         .city-title {
             font-size: 2rem;
             color: var(--primary);
-            margin: 30px 0 30px; /* Margen superior ajustado */
+            margin: 60px 0 30px;
             border-left: 5px solid var(--accent);
             padding-left: 15px;
         }
@@ -407,7 +411,7 @@
             
             <!-- Tour 1 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/1831823/pexels-photo-1831823.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Calles tradicionales de Kyoto" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?q=80&w=800&auto=format&fit=crop" alt="Calles tradicionales de Kyoto" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto</span></div>
                     <h3 class="tour-title">1. A Explorar Kyoto: Ruta Higashiyama</h3>
@@ -425,7 +429,7 @@
 
             <!-- Tour 2 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/3275005/pexels-photo-3275005.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ciervos sagrados en Nara" class="tour-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Nara_Deer_Park_in_Japan.jpg/800px-Nara_Deer_Park_in_Japan.jpg" alt="Ciervos sagrados en Nara" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto / Nara</span></div>
                     <h3 class="tour-title">2. A Explorar Kyoto y Nara</h3>
@@ -443,7 +447,7 @@
 
             <!-- Tour 3 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/3361480/pexels-photo-3361480.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pabellón Dorado de Kioto" class="tour-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Kinkaku-ji_in_winter.jpg/800px-Kinkaku-ji_in_winter.jpg" alt="Pabellón Dorado de Kioto" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Kyoto</span></div>
                     <h3 class="tour-title">3. Kyoto: Pabellón Dorado y Arashiyama</h3>
@@ -466,7 +470,7 @@
             
             <!-- Tour 4 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Castillo de Osaka" class="tour-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Osaka_Castle_02bs3200.jpg/800px-Osaka_Castle_02bs3200.jpg" alt="Castillo de Osaka" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Osaka</span></div>
                     <h3 class="tour-title">4. A Explorar Osaka</h3>
@@ -484,7 +488,7 @@
 
             <!-- Tour 5 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Comida callejera en Osaka" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?q=80&w=800&auto=format&fit=crop" alt="Comida callejera en Osaka" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Osaka</span></div>
                     <h3 class="tour-title">5. A Comerse Osaka (Tour Gastronómico)</h3>
@@ -500,7 +504,7 @@
 
             <!-- Tour 6 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Carne Wagyu A5 de Japón" class="tour-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Kobe_beef_at_a_restaurant_in_Kobe.jpg/800px-Kobe_beef_at_a_restaurant_in_Kobe.jpg" alt="Carne Wagyu A5 de Japón" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Osaka</span></div>
                     <h3 class="tour-title">6. La Ruta del Wagyu A5 (Gastronómico)</h3>
@@ -521,7 +525,7 @@
             
             <!-- Tour 7 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Torre de Tokio y ciudad" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800&auto=format&fit=crop" alt="Torre de Tokio y ciudad" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">7. Tokio: Armonía del Contraste</h3>
@@ -539,7 +543,7 @@
 
             <!-- Tour 8 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/3274624/pexels-photo-3274624.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Luces de Akihabara" class="tour-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Akihabara_Electric_Town_2021.jpg/800px-Akihabara_Electric_Town_2021.jpg" alt="Luces de Akihabara" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">8. Jardines Imperiales, Akihabara y Ueno</h3>
@@ -557,7 +561,7 @@
 
             <!-- Tour 9 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/2385210/pexels-photo-2385210.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cruce de Shibuya" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=800&auto=format&fit=crop" alt="Cruce de Shibuya" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">9. Tokio: Asakusa, Odaiba y Shibuya</h3>
@@ -575,7 +579,7 @@
 
             <!-- Tour 10 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/3760854/pexels-photo-3760854.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Noche cyberpunk en Tokio" class="tour-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Kabukicho_red_gate_and_neon_street_at_night%2C_Shinjuku%2C_Tokyo.jpg/800px-Kabukicho_red_gate_and_neon_street_at_night%2C_Shinjuku%2C_Tokyo.jpg" alt="Noche cyberpunk en Tokio" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 4 Horas</span> <span>Tokio Nocturno</span></div>
                     <h3 class="tour-title">10. Tokio: Noche de Neón</h3>
@@ -591,7 +595,7 @@
 
             <!-- Tour 11 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Callejón tradicional en Tokio" class="tour-img">
+                <img src="https://images.unsplash.com/photo-1528360354687-839420409a6d?q=80&w=800&auto=format&fit=crop" alt="Callejón tradicional en Tokio" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 4 Horas</span> <span>Tokio</span></div>
                     <h3 class="tour-title">11. Tokio: La Cara Antigua</h3>
@@ -607,7 +611,7 @@
 
             <!-- Tour 12 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/3740236/pexels-photo-3740236.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Comida gourmet en Tokio" class="tour-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Sushi_platter.jpg/800px-Sushi_platter.jpg" alt="Comida gourmet en Tokio" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 3 Horas</span> <span>Tokio Premium</span></div>
                     <h3 class="tour-title">12. A Comerse Tokio: Ruta Nakameguro</h3>
@@ -627,7 +631,7 @@
         <div class="tours-grid">
             <!-- Tour 13 -->
             <article class="tour-card">
-                <img src="https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Torii de Miyajima en Hiroshima" class="tour-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Itsukushima_Torii_130329.JPG/800px-Itsukushima_Torii_130329.JPG" alt="Torii de Miyajima en Hiroshima" class="tour-img">
                 <div class="tour-content">
                     <div class="tour-meta"><span><i class="far fa-clock"></i> 8 Horas</span> <span>Hiroshima / Miyajima</span></div>
                     <h3 class="tour-title">13. A Explorar Hiroshima y Miyajima</h3>
@@ -761,7 +765,7 @@
             const pax = document.getElementById('pax').value;
             const comments = document.getElementById('comments').value;
 
-            // Construir el cuerpo del correo (para usar un mailto client-side como solución HTML estática)
+            // Construir el cuerpo del correo
             const subject = encodeURIComponent(`Cotización de Tour: ${tour} - ${name}`);
             const body = encodeURIComponent(
                 `Hola equipo JaponDeCerca,\n\n` +
@@ -780,7 +784,7 @@
             // Intentar abrir el cliente de correo
             window.location.href = `mailto:rubencedeno07@gmail.com?subject=${subject}&body=${body}`;
 
-            // Mostrar el mensaje visual (Neuromarketing de recompensa instantánea)
+            // Mostrar el mensaje visual (Neuromarketing de recompensa)
             formContainer.style.display = 'none';
             successMessage.style.display = 'block';
         }
